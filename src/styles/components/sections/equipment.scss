@@ -1,0 +1,71 @@
+.equipment {
+  &__title {
+    font-size: 48px;
+    margin-bottom: 24px;
+    @media (max-width: 992px) {
+      font-size: 32px;
+    }
+    @media (max-width: 576px) {
+      font-size: 21px;
+    }
+  }
+  &__inner {
+    background-color: var(--grey-section-bg);
+    padding: 48px;
+    @media (max-width: 992px) {
+      padding: 24px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+    overflow-y: auto;
+  }
+  &__item {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    min-width: 800px;
+    @media (max-width: 992px) {
+      gap: 16px;
+    }
+  }
+  &__car-img {
+    max-height: 150px;
+    object-fit: cover;
+    width: calc(33% - 32px * 2 / 3);
+    @media (max-width: 992px) {
+      width: calc(33.333% - 16px * 2 / 3);
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: calc(33% - 32px * 2 / 3);
+  }
+  &__info-row {
+    display: flex;
+    gap: 5px;
+  }
+  &__info-title {
+    color: var(--pale-font);
+  }
+  &__button {
+    width: calc(33% - 32px * 2 / 3);
+    border-radius: 24px;
+    background-color: var(--accent);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 36px;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+    &:hover {
+      background-color: var(--accent-hover);
+    }
+  }
+}

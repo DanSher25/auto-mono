@@ -1,0 +1,23 @@
+.filters {
+  &__list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 1;
+    @media (max-width: 992px) {
+      width: 100%;
+      flex: none;
+    }
+    .ss-main {
+      background-color: var(--white);
+      border: none;
+      border-bottom: 1px solid var(--main-font);
+      border-radius: 0;
+    }
+    .ss-main .ss-arrow path {
+      stroke: var(--price);
+    }
+  }
+}
