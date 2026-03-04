@@ -1,8 +1,10 @@
 import FlipDown from "./vendor/flipDown.js";
 import SlimSelect from "slim-select";
+import Swiper from "swiper";
 
 import "slim-select/styles";
 import "flipdown/dist/flipdown.css";
+import "swiper/css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const initFlipDown = () => {
@@ -50,7 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const initHeroSlider = () => {
+    const slider = document.querySelector(".hero__list");
+    if (!slider) return;
+
+    const swiper = new Swiper(slider, {
+      slidesPerView: "auto",
+      freeMode: true,
+    });
+  };
+
   initFlipDown();
   initFilters();
   checkForm();
+  initHeroSlider();
 });

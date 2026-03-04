@@ -17,6 +17,10 @@
       padding-top: 24px;
       padding-bottom: 34px;
     }
+    @media (max-width: 768px) {
+      min-height: 220px;
+      padding-bottom: 24px;
+    }
   }
   &__title {
     color: var(--white);
@@ -51,6 +55,9 @@
     width: fit-content;
     &:hover {
       background-color: var(--accent-hover);
+    }
+    @media (max-width: 768px) {
+      padding: 16px 28px;
     }
   }
 }

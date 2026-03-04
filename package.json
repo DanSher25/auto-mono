@@ -19,6 +19,7 @@
   "dependencies": {
     "@fancyapps/ui": "^6.1.10",
     "flipdown": "^0.3.2",
-    "slim-select": "^3.4.3"
+    "slim-select": "^3.4.3",
+    "swiper": "^12.1.2"
   }
 }
