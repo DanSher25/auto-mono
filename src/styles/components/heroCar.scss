@@ -3,11 +3,16 @@
     width: 100%;
     max-height: 222px;
     object-fit: cover;
-    @media (min-width: 1000px) and (max-width: 1240px) {
-      max-height: 250px;
+    @media (max-width: 1024px) {
+      width: auto;
+      margin: 0 auto;
+      display: block;
     }
-    @media (min-width: 420px) and (max-width: 576px) {
-      max-height: 140px;
+    @media (max-width: 1240px) {
+      max-height: 300px;
+    }
+    @media (max-width: 576px) {
+      max-height: 250px;
     }
   }
   &__info {
