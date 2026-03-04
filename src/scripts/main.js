@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: "auto",
       freeMode: true,
       loop: true,
-      speed: 4000,
+      speed: 3000,
 
       autoplay: {
         delay: 1,
