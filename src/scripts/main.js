@@ -1,13 +1,29 @@
+import { Fancybox } from "@fancyapps/ui";
 import FlipDown from "./vendor/flipDown.js";
 import SlimSelect from "slim-select";
 import Swiper from "swiper";
 import { Autoplay } from "swiper/modules";
+import IMask from "imask";
 
+import "@fancyapps/ui/dist/fancybox.css";
 import "slim-select/styles";
 import "flipdown/dist/flipdown.css";
 import "swiper/css";
 
 document.addEventListener("DOMContentLoaded", () => {
+  const initPhoneMask = () => {
+    const inputs = document.querySelectorAll('input[type="tel"]:not([data-mask-init])');
+    if (!inputs.length) return;
+
+    inputs.forEach((input) => {
+      IMask(input, {
+        mask: "+{7} (000) 000-00-00",
+        lazy: false,
+      });
+
+      input.dataset.maskInit = "true";
+    });
+  };
   const initFlipDown = () => {
     const el = document.getElementById("flipdown");
 
@@ -99,8 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  Fancybox.bind("[data-fancybox]", {});
+
   initFlipDown();
   initFilters();
   checkForm();
   initHeroSlider();
+  initPhoneMask();
 });

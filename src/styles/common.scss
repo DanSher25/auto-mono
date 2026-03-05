@@ -214,6 +214,10 @@ body {
   color: var(--main-font) !important;
 }
 
+.fancybox__content {
+  padding: 1.5rem !important;
+}
+
 @media (max-width: 400px) {
   .flipdown .rotor-group {
     padding-right: 15px !important;
