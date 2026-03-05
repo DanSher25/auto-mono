@@ -19,7 +19,7 @@
         </div>
         <div class="header__right">
           <a href="tel:+74955566677" class="header__phone"><img src="./images/phone.svg" alt="" class="header__phone-icon" /> +7 (495) 556-66-77</a>
-          <a href="/" class="header__call-request call-request">Заказать звонок</a>
+          <a href="#request-call" class="header__call-request call-request" data-fancybox>Заказать звонок</a>
         </div>
       </div>
     </header>
@@ -118,7 +118,7 @@
                 СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ на <strong>LADA</strong>
               </h2>
               <div class="special-conditions__buttons">
-                <a href="/" class="special-conditions__button call-request">Заказать звонок</a>
+                <a href="#request-call" class="special-conditions__button call-request" data-fancybox>Заказать звонок</a>
                 <a href="tel:+74955566677" class="special-conditions__button special-conditions__button-phone">+7 (495) 556-66-77</a>
               </div>
               <div class="special-conditions__users">
@@ -439,6 +439,34 @@
         </div>
       </div>
     </footer>
+
+    <div id="request-call" style="display: none">
+      <form action="#" class="request-call form">
+        <div class="request-call__wrapper">
+          <h3 class="request-call__title">ЗАКАЗАТЬ ЗВОНОК</h3>
+          <div class="modal-form__input-wrapper">
+            <label for="request-call-name" class="modal-form__label">Имя<span class="red">*</span></label>
+            <input type="text" class="modal-form__input" name="name" required id="request-call-name" />
+          </div>
+          <div class="modal-form__input-wrapper">
+            <label for="request-call-tel" class="modal-form__label">Телефон<span class="red">*</span></label>
+            <input type="tel" class="modal-form__input" name="phone" required id="request-call-tel" />
+          </div>
+          <div class="modal-form__checkbox">
+            <input type="checkbox" class="modal-form__checkbox-input" required id="request-call-checkbox" />
+            <label for="request-call-checkbox" class="modal-form__checkbox-label"
+              >Согласие на <a href="/">обработку персональных данных</a> и на
+              <a href="">предоставление персональных данных третьим лицам<span class="red">*</span></a>
+            </label>
+          </div>
+          <button type="submit" class="modal-form__submit call-request">ПЕРЕЗВОНИТЕ МНЕ</button>
+          <div class="modal-form__policy">
+            Эта страница защищена сервисом Yandex SmartCaptcha и подпадает под <a href="/">Политику конфиденциальности</a> и
+            <a href="/">Условия использования Yandex</a>
+          </div>
+        </div>
+      </form>
+    </div>
 
   </body>
 </html>
